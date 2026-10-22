@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taylor Scott-Reimer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Taylor Scott-Reimer is a communication scholar, lecturer and author who studies how platforms and institutions decide whose voices carry authority. Speaker for educators, organizations and churches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a single editorial column with a wide hero question, then two side-by-side "doors" that split the audience, then quiet reference sections. */
+:root{
+  --paper:#F5F4F7;
+  --surface:#FFFFFF;
+  --ink:#1D1928;
+  --muted:#5E5770;
+  --rule:#DCD7E4;
+  --plum:#4E2463;
+  --plum-soft:#EDE4F2;
+  --saffron:#E9A53A;
+  --door-a:#E7EEF3;
+  --door-b:#F2EAF4;
+  --f-display:"Gloock", "Iowan Old Style", Georgia, serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#15121C; --surface:#1E1A27; --ink:#EEEAF4; --muted:#ABA3BC; --rule:#342E40;
+    --plum:#C9A2DD; --plum-soft:#2C2238; --saffron:#F0B456; --door-a:#1B2129; --door-b:#241B2B;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#15121C; --surface:#1E1A27; --ink:#EEEAF4; --muted:#ABA3BC; --rule:#342E40;
+  --plum:#C9A2DD; --plum-soft:#2C2238; --saffron:#F0B456; --door-a:#1B2129; --door-b:#241B2B;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;margin:0}
+a{color:var(--plum);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.label{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem)}
+h3{font-size:1.35rem}
+p{margin:0}
+
+/* Header */
+.top{border-bottom:1px solid var(--rule)}
+.top .wrap{display:flex;flex-wrap:wrap;gap:.75rem 2rem;align-items:center;justify-content:space-between;padding-block:1.1rem}
+.name{font-family:var(--f-display);font-size:1.3rem;color:var(--ink);text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+.top nav a:hover{color:var(--plum)}
+
+/* Hero */
+.hero .wrap{padding-block:clamp(3rem,8vw,6.5rem) clamp(2.5rem,6vw,4rem);display:grid;gap:1.75rem}
+.hero h1{font-size:clamp(2.8rem,9vw,6.2rem);letter-spacing:-.01em;max-width:14ch}
+.hero h1 .mark{background:linear-gradient(transparent 62%, var(--saffron) 62%, var(--saffron) 90%, transparent 90%);padding:0 .08em}
+.hero .lede{font-size:clamp(1.1rem,2.2vw,1.3rem);color:var(--muted);max-width:40rem}
+.hero .lede strong{color:var(--ink);font-weight:600}
+.cred{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;padding-top:.5rem}
+.cred span{font-family:var(--f-mono);font-size:.8rem;color:var(--muted)}
+
+/* Doors */
+.doors .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1.25rem;padding-block:1rem 4rem}
+.door{border-radius:14px;padding:clamp(1.5rem,3vw,2.25rem);display:flex;flex-direction:column;gap:1.25rem;min-width:0}
+.door.a{background:var(--door-a)}
+.door.b{background:var(--door-b)}
+.door .for{font-size:1rem;color:var(--muted)}
+.talks{list-style:none;margin:0;padding:0;display:grid;gap:1rem}
+.talks li{border-top:1px solid var(--rule);padding-top:1rem;display:grid;gap:.3rem}
+.talks b{font-weight:600;font-size:1.05rem}
+.talks span{color:var(--muted);font-size:.95rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;align-self:flex-start;background:var(--plum);color:var(--paper);text-decoration:none;font-weight:600;padding:.75rem 1.2rem;border-radius:999px;margin-top:auto}
+.btn:hover{filter:brightness(1.1)}
+
+/* Sections */
+section.block{border-top:1px solid var(--rule)}
+section.block .wrap{padding-block:clamp(3rem,6vw,4.5rem);display:grid;grid-template-columns:minmax(0,14rem) minmax(0,1fr);gap:1.5rem 3rem}
+@media (max-width:760px){section.block .wrap{grid-template-columns:minmax(0,1fr)}}
+.body{display:grid;gap:1.25rem;max-width:42rem;min-width:0}
+.body p{color:var(--ink)}
+.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:1.5rem 2rem}
+.areas div{display:grid;gap:.35rem}
+.areas b{font-weight:600}
+.areas span{color:var(--muted);font-size:.97rem}
+
+.book{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.5rem;align-items:start}
+@media (max-width:520px){.book{grid-template-columns:minmax(0,1fr)}}
+.cover{width:7.5rem;aspect-ratio:2/3;max-width:100%;background:var(--plum);border-radius:4px 8px 8px 4px;color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;padding:.8rem .7rem;box-shadow:inset 6px 0 0 rgba(0,0,0,.18)}
+.cover i{font-family:var(--f-display);font-style:normal;font-size:1.25rem;line-height:1.05}
+.cover small{font-family:var(--f-mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
+
+.list{list-style:none;margin:0;padding:0;display:grid}
+.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.25rem 1rem;padding-block:1rem;border-bottom:1px solid var(--rule);align-items:baseline}
+.list li:first-child{border-top:1px solid var(--rule)}
+.list .meta{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);white-space:nowrap}
+.list .what{grid-column:1/-1;color:var(--muted);font-size:.95rem}
+@media (max-width:520px){.list li{grid-template-columns:minmax(0,1fr)}.list .meta{white-space:normal}}
+
+.formats{display:flex;flex-wrap:wrap;gap:.5rem}
+.formats span{background:var(--plum-soft);color:var(--ink);border-radius:999px;padding:.3rem .85rem;font-size:.9rem}
+
+.contact{display:grid;gap:1rem}
+.email{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.email code{font-family:var(--f-mono);font-size:1rem;background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:.5rem .8rem;user-select:all;overflow-wrap:anywhere}
+.ghost{background:none;border:1px solid var(--rule);color:var(--ink);border-radius:999px;padding:.5rem 1rem;font:inherit;font-size:.9rem;cursor:pointer}
+.ghost:hover{border-color:var(--plum);color:var(--plum)}
+
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justify-content:space-between;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){.btn,.ghost{transition:filter .2s, border-color .2s, color .2s}}
+</style>
+
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="name" href="#top">Taylor Scott-Reimer</a>
+    <nav aria-label="Main">
+      <a href="#speaking">Speaking</a>
+      <a href="#research">Research</a>
+      <a href="#writing">Writing</a>
+      <a href="#media">Media</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <p class="label">Communication scholar · Lecturer · Author</p>
+      <h1>Who gets to be <span class="mark">believed?</span></h1>
+      <p class="lede"><strong>Taylor Scott-Reimer studies how platforms and institutions decide whose voices carry authority.</strong> She helps educators, organizations and congregations understand what the feed is teaching us, and how to form people wisely inside it.</p>
+      <div class="cred">
+        <span>MSc Communication, Purdue</span>
+        <span>CTDP</span>
+        <span>Lecturer, Tyndale University</span>
+        <span>Curriculum, Knox College, U of T</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="doors" id="speaking" aria-label="Speaking">
+    <div class="wrap">
+      <article class="door a">
+        <p class="label">For educators &amp; organizations</p>
+        <h2>Media, AI and trust in the age of the feed</h2>
+        <p class="for">School boards, colleges and universities, communication conferences, workplaces and women in leadership events.</p>
+        <ul class="talks">
+          <li><b>Who Gets to Be Believed? Algorithms, Gender and Credibility Online</b><span>How platforms distribute authority, and why it shapes whose expertise gets heard.</span></li>
+          <li><b>Teaching in the Age of the Feed</b><span>Media literacy strategies for students who learned to read the world through algorithms.</span></li>
+          <li><b>AI in the Classroom: Formation, Not Just Productivity</b><span>A human-centred approach to AI that protects judgment, voice and trust in learning.</span></li>
+          <li><b>Between Analog and Algorithm: The Zillennial Lens</b><span>How people now build trust, and what that means for leading and communicating well.</span></li>
+        </ul>
+        <a class="btn" href="https://tally.so/r/nGyo0j" target="_blank" rel="noopener">Book Taylor for your event</a>
+      </article>
+
+      <article class="door b">
+        <p class="label">For churches &amp; faith communities</p>
+        <h2>Fierce faith for a platformed world</h2>
+        <p class="for">Women's conferences and retreats, denominational gatherings, parent nights, youth leaders, seminaries and Sunday services.</p>
+        <ul class="talks">
+          <li><b>She Believed: The Fierce Faith of the Women of Scripture</b><span>Courage to claim your calling through the women Scripture remembers and the church often forgot.</span></li>
+          <li><b>Algorithms Are Discipling Our Kids</b><span>How feeds form children, and practical rhythms for counter-formation at home.</span></li>
+          <li><b>What's Shaping Your Faith? AI and Christian Formation</b><span>A theological lens for AI that moves past panic and hype toward wise discipleship.</span></li>
+          <li><b>Who Gets to Be Believed?</b><span>How credibility is assigned online and in the church, and how to widen it.</span></li>
+        </ul>
+        <a class="btn" href="https://tally.so/r/nGyo0j" target="_blank" rel="noopener">Invite Taylor to speak</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="formats">
+    <div class="wrap">
+      <p class="label">Formats</p>
+      <div class="body">
+        <div class="formats">
+          <span>Keynote</span><span>Workshop</span><span>PD day session</span><span>Guest lecture</span><span>Panel</span><span>Retreat series</span><span>Sermon</span><span>Virtual</span>
+        </div>
+        <p>Based in Barrie, Ontario. Available in person across Ontario and virtually anywhere.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="research">
+    <div class="wrap">
+      <p class="label">Research</p>
+      <div class="body">
+        <h2>Authority is being redistributed. Most of us never noticed.</h2>
+        <p>Taylor's research examines how Instagram's algorithmic infrastructure shapes religious and epistemic authority for women: who gets amplified, who gets trusted, and who quietly disappears from view. Religion is her case study; the question reaches every institution that depends on being believed.</p>
+        <div class="areas">
+          <div><b>Algorithmic authority</b><span>How ranking systems decide whose knowledge circulates and whose stays local.</span></div>
+          <div><b>Gender and credibility</b><span>Why women's expertise is weighed differently, online and in institutions.</span></div>
+          <div><b>Digital religion</b><span>How faith communities and their leaders are reshaped by platforms.</span></div>
+          <div><b>Media literacy and AI in learning</b><span>Practical formation for students, teachers and adult learners.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="writing">
+    <div class="wrap">
+      <p class="label">Writing</p>
+      <div class="body">
+        <div class="book">
+          <div class="cover" aria-hidden="true"><i>She Believed</i><small>Taylor Scott-Reimer</small></div>
+          <div class="body" style="gap:.9rem">
+            <h3>She Believed: Recovering the Fierce Faith of the Women of Scripture and Ourselves</h3>
+            <p>A reexamination of the interpretive traditions that obscured women's intellectual, spiritual and church authority. Part exegetical resource, part framework for communities reconsidering women's leadership. Now a 12-module course with Knox College and CHURCHx.</p>
+            <a href="https://www.amazon.ca/She-Believed-Recovering-Scripture-Ourselves/dp/B0F6VH38T4?&amp;linkCode=ll2&amp;tag=shebelievedbo-20&amp;linkId=6cdebcc6f832a293fbd390f526606dd5&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener">Order on Amazon.ca</a>
+          </div>
+        </div>
+        <ul class="list">
+          <li><b>Algorithms Are Discipling Our Kids</b><span class="meta">Faith Today · Cover story · Mar/Apr 2026</span></li>
+          <li><b>What's Shaping Your Faith?</b><span class="meta">Faith Today · Cover story · Sep/Oct 2026</span><span class="what">On artificial intelligence and Christian formation.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="media">
+    <div class="wrap">
+      <p class="label">Media</p>
+      <div class="body">
+        <ul class="list">
+          <li><a href="https://unseminary.com/reclaiming-silenced-voices-women-scripture-the-church-with-taylor-scott-reimer/" target="_blank" rel="noopener"><b>Reclaiming Silenced Voices: Women, Scripture and the Church</b></a><span class="meta">unSeminary Podcast</span></li>
+          <li><a href="https://ministryforum.ca/podcast/s5e3-taylor-scott-riemer" target="_blank" rel="noopener"><b>Digital culture, motherhood as leadership and the future of church formation</b></a><span class="meta">Ministry Forum Podcast · S5 E3</span></li>
+          <li><a href="https://www.youtube.com/watch?v=gQ5Qqw-KzdE" target="_blank" rel="noopener"><b>She Believed and women's leadership</b></a><span class="meta">The Perspective with Mike Sherbino</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap">
+      <p class="label">About</p>
+      <div class="body">
+        <p>Taylor Scott-Reimer is a communication scholar, lecturer and author. She holds an MSc in Communication from Purdue University and is a Certified Training and Development Professional. She teaches at Tyndale University and develops curriculum for Knox College at the University of Toronto.</p>
+        <p>A self-described Zillennial who grew up between an analog childhood and the early social media era, Taylor speaks with clarity and warmth to audiences navigating trust, formation and technology. She lives in Barrie, Ontario, with her husband and two young children.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <p class="label">Contact</p>
+      <div class="body contact">
+        <h2>Bring this conversation to your people.</h2>
+        <p>For speaking, workshops and collaboration, use the booking form or write directly.</p>
+        <div class="email">
+          <code id="addr">taylorscottreimer@gmail.com</code>
+          <button class="ghost" id="copy" type="button">Copy email</button>
+        </div>
+        <a class="btn" href="https://tally.so/r/nGyo0j" target="_blank" rel="noopener">Open the booking form</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Taylor Scott-Reimer</span>
+    <span>Barrie, Ontario, Canada</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b = this, t = document.getElementById('addr').textContent;
+  function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy email'; }, 1800); }
+  function fallback(){ var r = document.createRange(); r.selectNodeContents(document.getElementById('addr')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected, press copy'; }
+  try { navigator.clipboard.writeText(t).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
+
+</body>
+</html>
