@@ -58,8 +58,12 @@ p{margin:0}
 .top nav a:hover{color:var(--plum)}
 
 /* Hero */
-.hero .wrap{padding-block:clamp(3rem,8vw,6.5rem) clamp(2.5rem,6vw,4rem);display:grid;gap:1.75rem}
-.hero h1{font-size:clamp(2.8rem,9vw,6.2rem);letter-spacing:-.01em;max-width:14ch}
+.hero .wrap{padding-block:clamp(2.5rem,7vw,5.5rem) clamp(2.5rem,6vw,4rem);display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:2rem clamp(2rem,5vw,4rem);align-items:center}
+.hero-text{display:grid;gap:1.75rem;min-width:0}
+.portrait{margin:0;min-width:0}
+.portrait img{display:block;width:100%;height:auto;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%;border-radius:14px;background:var(--plum-soft)}
+@media (max-width:760px){.hero .wrap{grid-template-columns:minmax(0,1fr)}.portrait{max-width:20rem}}
+.hero h1{font-size:clamp(2.8rem,8vw,5.4rem);letter-spacing:-.01em;max-width:14ch}
 .hero h1 .mark{background:linear-gradient(transparent 62%, var(--saffron) 62%, var(--saffron) 90%, transparent 90%);padding:0 .08em}
 .hero .lede{font-size:clamp(1.1rem,2.2vw,1.3rem);color:var(--muted);max-width:40rem}
 .hero .lede strong{color:var(--ink);font-weight:600}
@@ -135,6 +139,7 @@ footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justi
 <main id="top">
   <section class="hero">
     <div class="wrap">
+      <div class="hero-text">
       <p class="label">Communication scholar · Lecturer · Author</p>
       <h1>Who gets to be <span class="mark">believed?</span></h1>
       <p class="lede"><strong>Taylor Scott-Reimer studies how platforms and institutions decide whose voices carry authority.</strong> She helps educators, organizations and congregations understand what the feed is teaching us, and how to form people wisely inside it.</p>
@@ -144,6 +149,10 @@ footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justi
         <span>Lecturer, Tyndale University</span>
         <span>Curriculum, Knox College, U of T</span>
       </div>
+      </div>
+      <figure class="portrait">
+        <img src="taylor-scott-reimer.jpg" width="900" height="1200" alt="Taylor Scott-Reimer smiling outdoors in evening light">
+      </figure>
     </div>
   </section>
 
@@ -218,8 +227,8 @@ footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justi
           </div>
         </div>
         <ul class="list">
-          <li><b>Algorithms Are Discipling Our Kids</b><span class="meta">Faith Today · Cover story · Mar/Apr 2026</span></li>
-          <li><b>What's Shaping Your Faith?</b><span class="meta">Faith Today · Cover story · Sep/Oct 2026</span><span class="what">On artificial intelligence and Christian formation.</span></li>
+          <li><a href="https://faithtoday.ca/Magazines/2026-Mar-Apr/Algorithms-are-discipling-our-kids" target="_blank" rel="noopener"><b>Algorithms Are Discipling Our Kids</b></a><span class="meta">Faith Today · Cover story · Mar/Apr 2026</span><span class="what">On raising children well when the feed is forming them first.</span></li>
+          <li><a href="https://faithtoday.ca/Magazines/Sep-Oct/What-s-Shaping-Your-Faith" target="_blank" rel="noopener"><b>What's Shaping Your Faith?</b></a><span class="meta">Faith Today · Cover story · Sep/Oct 2026</span><span class="what">How AI tools affect Christian formation, and how to discern well.</span></li>
         </ul>
       </div>
     </div>
