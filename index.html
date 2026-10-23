@@ -96,6 +96,8 @@ section.block .wrap{padding-block:clamp(3rem,6vw,4.5rem);display:grid;grid-templ
 
 .book{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.5rem;align-items:start}
 @media (max-width:520px){.book{grid-template-columns:minmax(0,1fr)}}
+.cover-img{display:block;width:9.5rem;max-width:100%;height:auto;border-radius:3px}
+.tagline{font-family:var(--f-display);font-size:1.15rem;color:var(--plum)}
 .cover{width:7.5rem;aspect-ratio:2/3;max-width:100%;background:var(--plum);border-radius:4px 8px 8px 4px;color:var(--paper);display:flex;flex-direction:column;justify-content:space-between;padding:.8rem .7rem;box-shadow:inset 6px 0 0 rgba(0,0,0,.18)}
 .cover i{font-family:var(--f-display);font-style:normal;font-size:1.25rem;line-height:1.05}
 .cover small{font-family:var(--f-mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;opacity:.85}
@@ -219,9 +221,10 @@ footer .wrap{padding-block:2rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;justi
       <p class="label">Writing</p>
       <div class="body">
         <div class="book">
-          <div class="cover" aria-hidden="true"><i>She Believed</i><small>Taylor Scott-Reimer</small></div>
+          <img class="cover-img" src="she-believed-cover.jpg" width="241" height="403" alt="Cover of She Believed by Taylor Scott-Reimer">
           <div class="body" style="gap:.9rem">
             <h3>She Believed: Recovering the Fierce Faith of the Women of Scripture and Ourselves</h3>
+            <p class="tagline">Part deconstruction memoir. Part Bible study. For every woman who's ever wondered if she still belongs.</p>
             <p>A reexamination of the interpretive traditions that obscured women's intellectual, spiritual and church authority. Part exegetical resource, part framework for communities reconsidering women's leadership. Now a 12-module course with Knox College and CHURCHx.</p>
             <a href="https://www.amazon.ca/She-Believed-Recovering-Scripture-Ourselves/dp/B0F6VH38T4?&amp;linkCode=ll2&amp;tag=shebelievedbo-20&amp;linkId=6cdebcc6f832a293fbd390f526606dd5&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener">Order on Amazon.ca</a>
           </div>
